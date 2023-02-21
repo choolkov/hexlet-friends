@@ -60,6 +60,11 @@ urlpatterns = [
         name='contributor_pullrequests',
     ),
     path(
+        'contributors/<slug:slug>/settings/',
+        views.contributor_settings.ListView.as_view(),
+        name='contributor_settings',
+    ),
+    path(
         'projects/',
         views.projects.ListView.as_view(),
         name='projects_list',
